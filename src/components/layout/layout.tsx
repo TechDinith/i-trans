@@ -1,8 +1,12 @@
 import * as React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import { iLayout } from "./layout.interface";
+import Nav from "../nav/nav";
+import { useColorScheme } from "@mui/joy/styles";
+import Box from "@mui/material/Box";
 
 const Layout = ({ children }: iLayout) => {
+  useColorScheme();
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -14,11 +18,10 @@ const Layout = ({ children }: iLayout) => {
   `);
 
   return (
-    <div>
-      {/* header */}
-      {/* nav */}
+    <Box>
+      <Nav />
       <main>{children}</main>
-    </div>
+    </Box>
   );
 };
 
