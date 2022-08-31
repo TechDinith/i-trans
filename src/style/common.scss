@@ -10,8 +10,12 @@ body {
     rgb(1, 42, 75),
     rgb(0, 43, 36)
   );
-  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  background-attachment: fixed;
   // justify-content: center;
   // align-items: center;
-  overflow: hidden;
+  // overflow: hidden;
 }
