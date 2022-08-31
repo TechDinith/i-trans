@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import { iLayout } from "./layout.interface";
 import Nav from "../nav/nav";
 import { useColorScheme } from "@mui/joy/styles";
@@ -19,8 +19,15 @@ const Layout = ({ children }: iLayout) => {
 
   return (
     <Box>
-      <Nav />
-      <main>{children}</main>
+      <div className="animation-wrapper">
+        <Nav />
+        <main>{children}</main>
+        {/* particles */}
+        <div className="particle particle-1"></div>
+        <div className="particle particle-2"></div>
+        <div className="particle particle-3"></div>
+        <div className="particle particle-4"></div>
+      </div>
     </Box>
   );
 };

@@ -37,24 +37,6 @@ $time-4: 200s;
   border-radius: 50%;
 }
 
-/* Styles */
-html,
-body {
-  height: 100%;
-}
-
-body {
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(1, 42, 75),
-    rgb(0, 43, 36)
-  );
-  display: flex;
-  // justify-content: center;
-  // align-items: center;
-  overflow: hidden;
-}
-
 .animation-wrapper {
   position: fixed;
   top: 0;
