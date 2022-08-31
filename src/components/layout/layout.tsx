@@ -2,11 +2,9 @@ import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { iLayout } from "./layout.interface";
 import Nav from "../nav/nav";
-import { useColorScheme } from "@mui/joy/styles";
 import Box from "@mui/material/Box";
 
 const Layout = ({ children }: iLayout) => {
-  useColorScheme();
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -18,7 +16,7 @@ const Layout = ({ children }: iLayout) => {
   `);
 
   return (
-    <Box>
+    <Box sx={{ justifyContent: "center" }}>
       <div className="animation-wrapper">
         <Nav />
         <main>{children}</main>

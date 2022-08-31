@@ -1,9 +1,5 @@
 import * as React from "react";
 import { Link, HeadFC } from "gatsby";
-import {
-  CssVarsProvider,
-  useColorScheme,
-} from "@mui/joy/styles/CssVarsProvider";
 
 const pageStyles = {
   color: "white",
@@ -27,7 +23,6 @@ const codeStyles = {
   borderRadius: 4,
 };
 export function NotFound() {
-  useColorScheme();
   return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>Page not found</h1>
@@ -48,11 +43,7 @@ export function NotFound() {
   );
 }
 const NotFoundPage = () => {
-  return (
-    <CssVarsProvider>
-      <NotFound />
-    </CssVarsProvider>
-  );
+  return <NotFound />;
 };
 
 export default NotFoundPage;
