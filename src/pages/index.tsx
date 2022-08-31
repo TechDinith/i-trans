@@ -14,6 +14,8 @@ import {
   responsiveFontSizes,
 } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
 
 const darkTheme = createTheme({
   palette: {
@@ -54,13 +56,16 @@ const IndexPage = () => {
           <Grid item xs={8} mb={{ xs: 10, sm: 55 }} id="top">
             <Logo />
           </Grid>
-          <Grid item xs={10}>
-            <Typography variant="h1" id="work">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-              iusto assumenda quod consectetur facere impedit fugit hic eaque,
-              mollitia explicabo quae. Exercitationem fugit voluptates, atque
-              itaque incidunt alias. Ducimus, perferendis.
-            </Typography>
+
+          <Grid item xs={12} component={Paper} sx={{ background: "#E27D60" }}>
+            <Box mx={5}>
+              <Typography variant="h1" id="work">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
+                iusto assumenda quod consectetur facere impedit fugit hic eaque,
+                mollitia explicabo quae. Exercitationem fugit voluptates, atque
+                itaque incidunt alias. Ducimus, perferendis.
+              </Typography>
+            </Box>
           </Grid>
           {/*
           <Grid item xs={8}>
