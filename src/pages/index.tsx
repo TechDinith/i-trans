@@ -16,6 +16,8 @@ import {
 import CssBaseline from "@mui/material/CssBaseline";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 const darkTheme = createTheme({
   palette: {
@@ -23,6 +25,7 @@ const darkTheme = createTheme({
   },
 });
 const theme = responsiveFontSizes(darkTheme);
+
 const IndexPage = () => {
   const [navbar, setNavbar] = React.useState(false);
 
@@ -53,8 +56,25 @@ const IndexPage = () => {
       )}
       <Layout>
         <Grid container mt={4} justifyContent="center" spacing={4}>
-          <Grid item xs={8} mb={{ xs: 10, sm: 55 }} id="top">
-            <Logo />
+          <Grid
+            item
+            xs={11}
+            mb={{ xs: 10, sm: 55 }}
+            id="top"
+            display={{ xs: "block", md: "flex", sm: "flex" }}
+            height="15%"
+          >
+            <Grid item xs={8} md={6} sm={6}>
+              <Logo />
+            </Grid>
+
+            <Grid item xs={8} md={6} sm={6} display="flex">
+              <Divider orientation="vertical" />
+              <Typography variant="h2" mt={{ xs: 12, sm: 0, md: 12 }} ml={5}>
+                Web solutions for <br />
+                <b>Minor</b> and <b>Start-up</b> companies.
+              </Typography>
+            </Grid>
           </Grid>
 
           <Grid item xs={12} component={Paper} sx={{ background: "#E27D60" }}>
