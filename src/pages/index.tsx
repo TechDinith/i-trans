@@ -17,7 +17,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
 
 const darkTheme = createTheme({
   palette: {
@@ -59,7 +59,7 @@ const IndexPage = () => {
           <Grid
             item
             xs={11}
-            mb={{ xs: 10, sm: 55 }}
+            mb={{ xs: 10, sm: 30 }}
             id="top"
             display={{ xs: "block", md: "flex", sm: "flex" }}
             height="15%"
@@ -77,15 +77,29 @@ const IndexPage = () => {
             </Grid>
           </Grid>
 
-          <Grid item xs={12} component={Paper} sx={{ background: "#E27D60" }}>
-            <Box mx={5}>
-              <Typography variant="h1" id="work">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-                iusto assumenda quod consectetur facere impedit fugit hic eaque,
-                mollitia explicabo quae. Exercitationem fugit voluptates, atque
-                itaque incidunt alias. Ducimus, perferendis.
+          <Grid item xs={11} component={Paper} elevation={1} pb={2} id="work">
+            <Typography variant="h2">
+              <b>Work</b> <ReceiptLongIcon />
+            </Typography>
+            <Typography variant="h5" component="p" ml={2}>
+              We develop simple but modern full-Stack web applications,
+              front-end web designs, and back-end integrations for already
+              designed front-ends.., especially for <b>minor</b> and{" "}
+              <b>start-up</b> companies.
+            </Typography>
+            <Typography variant="h5" component="p" ml={2} mt={2}>
+              With us, the cost is not an obstacle, and it's flexible more than
+              you can imagine.
+            </Typography>
+            <Typography variant="h5" component="p" ml={2} mt={2} mb={4}>
+              Well, if you have a project that cost is bothering you, just
+              contact us via the contact section.
+            </Typography>
+            <Divider variant="middle">
+              <Typography variant="h5">
+                <b>Previous works</b>
               </Typography>
-            </Box>
+            </Divider>
           </Grid>
           {/*
           <Grid item xs={8}>
