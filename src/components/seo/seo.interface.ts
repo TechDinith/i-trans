@@ -1,3 +1,3 @@
 export interface iSeo {
-  title: string;
+  title?: string;
 }

@@ -13,6 +13,13 @@ const config: GatsbyConfig = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-anchor-links`,
+
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/itrans-images/iTrans.svg",
+      },
+    },
   ],
 };
 

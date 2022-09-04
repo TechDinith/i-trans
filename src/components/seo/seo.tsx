@@ -15,7 +15,9 @@ const Seo = ({ title }: iSeo) => {
 
   return (
     <title>
-      {title} | {data.site.siteMetadata.title}
+      {title
+        ? `${title} | ${data.site.siteMetadata.title}`
+        : data.site.siteMetadata.title}
     </title>
   );
 };

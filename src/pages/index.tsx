@@ -17,7 +17,13 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
-import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
+import Work from "../components/work/work";
+import Sound from "react-sound";
+import MusicNoteIcon from "@mui/icons-material/MusicNote";
+import MusicOffIcon from "@mui/icons-material/MusicOff";
+import discovery from "../sounds/Discovery_EP_AK_Aljosha_Konstanty.mp3";
+import IconButton from "@mui/material/IconButton";
+import Fab from "@mui/material/Fab";
 
 const darkTheme = createTheme({
   palette: {
@@ -28,6 +34,7 @@ const theme = responsiveFontSizes(darkTheme);
 
 const IndexPage = () => {
   const [navbar, setNavbar] = React.useState(false);
+  const [isPlaying, setIsPlaying] = React.useState(false);
 
   const changeBackground = () => {
     if (window.scrollY >= 66) {
@@ -46,21 +53,46 @@ const IndexPage = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <p id="topup"></p>
+      <div id="topup">
+        <Sound
+          url={discovery}
+          playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED}
+          loop={true}
+          autoLoad
+          onError={(err: any) => console.log(err)}
+        />
+      </div>
+
+      <IconButton
+        onClick={() => setIsPlaying(!isPlaying)}
+        className="music-btn"
+      >
+        {!isPlaying ? (
+          <Fab size="small" color="info">
+            <MusicNoteIcon fontSize="small" color="inherit" />
+          </Fab>
+        ) : (
+          <Fab color="error" size="small">
+            <MusicOffIcon fontSize="small" color="inherit" />
+          </Fab>
+        )}
+      </IconButton>
+
       {navbar && (
         <>
           <AnchorLink to="/#topup" className="top-btn" stripHash>
-            <ArrowUpwardIcon color="primary" sx={{ fontSize: "30px" }} />
+            <Fab color="info" size="small">
+              <ArrowUpwardIcon color="inherit" fontSize="small" />
+            </Fab>
           </AnchorLink>
         </>
       )}
       <Layout>
-        <Grid container mt={4} justifyContent="center" spacing={4}>
+        <Grid container mt={4} justifyContent="center">
           <Grid
             item
             xs={11}
             mb={{ xs: 10, sm: 30 }}
-            id="top"
             display={{ xs: "block", md: "flex", sm: "flex" }}
             height="15%"
           >
@@ -77,24 +109,8 @@ const IndexPage = () => {
             </Grid>
           </Grid>
 
-          <Grid item xs={11} component={Paper} elevation={1} pb={2} id="work">
-            <Typography variant="h2">
-              <b>Work</b> <ReceiptLongIcon />
-            </Typography>
-            <Typography variant="h5" component="p" ml={2}>
-              We develop simple but modern full-Stack web applications,
-              front-end web designs, and back-end integrations for already
-              designed front-ends.., especially for <b>minor</b> and{" "}
-              <b>start-up</b> companies.
-            </Typography>
-            <Typography variant="h5" component="p" ml={2} mt={2}>
-              With us, the cost is not an obstacle, and it's flexible more than
-              you can imagine.
-            </Typography>
-            <Typography variant="h5" component="p" ml={2} mt={2} mb={4}>
-              Well, if you have a project that cost is bothering you, just
-              contact us via the contact section.
-            </Typography>
+          <Grid item xs={11} component={Paper} elevation={1} p={2} id="work">
+            <Work />
             <Divider variant="middle">
               <Typography variant="h5">
                 <b>Previous works</b>
@@ -136,4 +152,4 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <Seo title="Home" />;
+export const Head: HeadFC = () => <Seo />;
