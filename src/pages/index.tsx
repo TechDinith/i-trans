@@ -25,6 +25,7 @@ import discovery from "../sounds/Discovery_EP_AK_Aljosha_Konstanty.mp3";
 import Fab from "@mui/material/Fab";
 
 import PreWorks from "../components/pre-works/pre.works";
+import Tools from "../components/tools/tools";
 
 const darkTheme = createTheme({
   palette: {
@@ -117,8 +118,18 @@ const IndexPage = () => {
 
           <Grid item xs={11} component={Paper} elevation={1} p={2} id="work">
             <Work />
-
             <PreWorks />
+          </Grid>
+          <Grid
+            item
+            xs={11}
+            component={Paper}
+            elevation={5}
+            mt={5}
+            p={2}
+            id="tools"
+          >
+            <Tools />
           </Grid>
           {/*
           <Grid item xs={8}>
