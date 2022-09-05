@@ -2,6 +2,7 @@
 @import "../components/layout.scss";
 @import "../components/nav.scss";
 @import "../components/logo.scss";
+@import "../components/sPre-works/pre-works.scss";
 
 .top-btn {
   position: fixed;
@@ -10,8 +11,11 @@
   margin-bottom: 1%;
   margin-right: 1%;
 }
+
 .music-btn {
   position: fixed;
-  left: 0;
   bottom: 0;
+  left: 0;
+  margin-bottom: 1%;
+  margin-right: 1%;
 }

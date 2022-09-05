@@ -1,8 +1,8 @@
 import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { iSeo } from "./seo.interface";
+import { iSeo } from "../../interfaces/components/seo.interface";
 
-const Seo = ({ title }: iSeo) => {
+export default function Seo({ title }: iSeo) {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -20,6 +20,4 @@ const Seo = ({ title }: iSeo) => {
         : data.site.siteMetadata.title}
     </title>
   );
-};
-
-export default Seo;
+}

@@ -22,8 +22,9 @@ import Sound from "react-sound";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import MusicOffIcon from "@mui/icons-material/MusicOff";
 import discovery from "../sounds/Discovery_EP_AK_Aljosha_Konstanty.mp3";
-import IconButton from "@mui/material/IconButton";
 import Fab from "@mui/material/Fab";
+
+import PreWorks from "../components/pre-works/pre.works";
 
 const darkTheme = createTheme({
   palette: {
@@ -63,20 +64,25 @@ const IndexPage = () => {
         />
       </div>
 
-      <IconButton
-        onClick={() => setIsPlaying(!isPlaying)}
-        className="music-btn"
-      >
-        {!isPlaying ? (
-          <Fab size="small" color="info">
-            <MusicNoteIcon fontSize="small" color="inherit" />
-          </Fab>
-        ) : (
-          <Fab color="error" size="small">
-            <MusicOffIcon fontSize="small" color="inherit" />
-          </Fab>
-        )}
-      </IconButton>
+      {!isPlaying ? (
+        <Fab
+          size="small"
+          color="info"
+          onClick={() => setIsPlaying(!isPlaying)}
+          className="music-btn"
+        >
+          <MusicNoteIcon fontSize="small" color="inherit" />
+        </Fab>
+      ) : (
+        <Fab
+          color="error"
+          size="small"
+          onClick={() => setIsPlaying(!isPlaying)}
+          className="music-btn"
+        >
+          <MusicOffIcon fontSize="small" color="inherit" />
+        </Fab>
+      )}
 
       {navbar && (
         <>
@@ -111,11 +117,8 @@ const IndexPage = () => {
 
           <Grid item xs={11} component={Paper} elevation={1} p={2} id="work">
             <Work />
-            <Divider variant="middle">
-              <Typography variant="h5">
-                <b>Previous works</b>
-              </Typography>
-            </Divider>
+
+            <PreWorks />
           </Grid>
           {/*
           <Grid item xs={8}>
