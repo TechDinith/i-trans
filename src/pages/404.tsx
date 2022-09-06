@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link, HeadFC } from "gatsby";
+import "../style/pages/index.scss";
 
 const pageStyles = {
   color: "white",
@@ -22,6 +23,7 @@ const codeStyles = {
   fontSize: "1.25rem",
   borderRadius: 4,
 };
+
 export function NotFound() {
   return (
     <main style={pageStyles}>
