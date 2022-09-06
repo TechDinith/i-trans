@@ -27,6 +27,8 @@ import Fab from "@mui/material/Fab";
 import PreWorks from "../components/pre-works/pre.works";
 import Tools from "../components/tools/tools";
 import Contact from "../components/contact/contact";
+import About from "../components/about/about";
+import Button from "@mui/material/Button";
 
 const darkTheme = createTheme({
   palette: {
@@ -100,7 +102,7 @@ const IndexPage = () => {
           <Grid
             item
             xs={11}
-            mb={{ xs: 10, sm: 30 }}
+            mb={{ xs: 10, sm: 15 }}
             display={{ xs: "block", md: "flex", sm: "flex" }}
             height="15%"
           >
@@ -116,7 +118,16 @@ const IndexPage = () => {
               </Typography>
             </Grid>
           </Grid>
-
+          <Grid item xs={6} mb="2%">
+            <Button variant="outlined" size="large" fullWidth color="secondary">
+              <AnchorLink
+                to="/#contact"
+                title="Get Started!"
+                className="about-anchor "
+                stripHash
+              />
+            </Button>
+          </Grid>
           <Grid item xs={11} component={Paper} elevation={1} p={2} id="work">
             <Work />
             <PreWorks />
@@ -144,27 +155,40 @@ const IndexPage = () => {
           >
             <Contact />
           </Grid>
-          {/*
-          
-          <Grid item xs={8} id="contact">
-            <Typography variant="h1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-              iusto assumenda quod consectetur facere impedit fugit hic eaque,
-              mollitia explicabo quae. Exercitationem fugit voluptates, atque
-              itaque incidunt alias. Ducimus, perferendis.
-            </Typography>
+          <Grid
+            item
+            xs={11}
+            component={Paper}
+            elevation={15}
+            mt={5}
+            p={2}
+            id="about"
+          >
+            <About />
           </Grid>
-          <br />
-          <Grid item xs={8}>
-            <Typography variant="h1" id="about">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-              iusto assumenda quod consectetur facere impedit fugit hic eaque,
-              mollitia explicabo quae. Exercitationem fugit voluptates, atque
-              itaque incidunt alias. Ducimus, perferendis.
-            </Typography>
-          </Grid> */}
         </Grid>
       </Layout>
+      <Grid
+        item
+        xs={12}
+        component={Paper}
+        elevation={15}
+        mt={5}
+        p={2}
+        display="flex"
+        justifyContent="center"
+      >
+        <Typography variant="caption">
+          Copyright ©{" "}
+          <AnchorLink
+            to="/#topup"
+            title="iTrans"
+            className="navAnchor "
+            stripHash
+          />{" "}
+          {new Date().getFullYear()}.
+        </Typography>
+      </Grid>
     </ThemeProvider>
   );
 };

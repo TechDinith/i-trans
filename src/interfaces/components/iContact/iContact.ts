@@ -4,7 +4,3 @@ export interface iFormInput {
   info: string;
   otherContacts: string;
 }
-
-export interface iContact {
-  setNotify: any;
-}
