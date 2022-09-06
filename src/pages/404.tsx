@@ -37,7 +37,10 @@ export function NotFound() {
           </>
         ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <Link to="/" color="white">
+          Go home
+        </Link>
+        .
       </p>
     </main>
   );
