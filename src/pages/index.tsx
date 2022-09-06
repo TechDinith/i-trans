@@ -66,23 +66,26 @@ const IndexPage = () => {
       </div>
 
       {!isPlaying ? (
-        <Fab
-          size="small"
-          color="info"
-          onClick={() => setIsPlaying(!isPlaying)}
-          className="music-btn"
-        >
-          <MusicNoteIcon fontSize="small" color="inherit" />
-        </Fab>
+        <div className="music-btn">
+          <Fab
+            size="small"
+            color="info"
+            onClick={() => setIsPlaying(!isPlaying)}
+          >
+            <MusicNoteIcon fontSize="small" color="inherit" />
+          </Fab>
+        </div>
       ) : (
-        <Fab
-          color="error"
-          size="small"
-          onClick={() => setIsPlaying(!isPlaying)}
-          className="music-btn"
-        >
-          <MusicOffIcon fontSize="small" color="inherit" />
-        </Fab>
+        <div className="music-btn">
+          <Fab
+            color="error"
+            size="small"
+            onClick={() => setIsPlaying(!isPlaying)}
+            className="music-btn"
+          >
+            <MusicOffIcon fontSize="small" color="inherit" />
+          </Fab>
+        </div>
       )}
 
       {navbar && (
