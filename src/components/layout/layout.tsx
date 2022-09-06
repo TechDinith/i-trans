@@ -1,20 +1,9 @@
 import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import { iLayout } from "../../interfaces/components/layout.interface";
 import Nav from "../nav/nav";
 import Box from "@mui/material/Box";
 
 const Layout = ({ children }: iLayout) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   return (
     <Box sx={{ justifyContent: "center" }}>
       <div className="animation-wrapper">

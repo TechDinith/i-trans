@@ -1,6 +1,7 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import AutoFixHighIcon from "@mui/icons-material/AutoFixHigh";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function Tools() {
   return (
@@ -9,7 +10,7 @@ export default function Tools() {
         <b>Tools</b> <AutoFixHighIcon />
       </Typography>
 
-      <img src="images/coming-soon.jpg" width="100%" />
+      <StaticImage src="../../images/coming-soon.jpg" alt="comingsoon" />
     </>
   );
 }

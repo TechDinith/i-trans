@@ -13,11 +13,11 @@ export default function About() {
       </Typography>
       <Grid container alignItems="center" justifyContent="center">
         <Typography width="100%" variant="h5" textAlign="center">
-          We're freelancers!
+          We're a team of freelancers!
         </Typography>
         <Typography width="100%" variant="h5" textAlign="center">
-          We can say, we're a team of <b>Work</b>, that does the <b>Work</b> as
-          our own!
+          We can say, We are a <b>team of work</b>, that treats{" "}
+          <b>your work as our own</b>.
         </Typography>
         <Typography width="100%" variant="h5" textAlign="center">
           We've just started <b>iTrans</b>, So we would like to hear from you

@@ -9,7 +9,6 @@ import { iFormInput } from "../../interfaces/components/iContact/iContact";
 import UseEmail from "./Email/useEmail";
 import SendIcon from "@mui/icons-material/Send";
 import EmailIcon from "@mui/icons-material/Email";
-import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import Box from "@mui/material/Box";
 
 export default function Contact() {

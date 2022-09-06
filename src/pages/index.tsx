@@ -2,7 +2,6 @@ import * as React from "react";
 import type { HeadFC } from "gatsby";
 import Seo from "../components/seo/seo";
 import Layout from "../components/layout/layout";
-import Logo from "../components/logo/logo";
 import "../style/pages/index.scss";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
@@ -15,20 +14,18 @@ import {
 } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Paper from "@mui/material/Paper";
-import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
 import Work from "../components/work/work";
 import Sound from "react-sound";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import MusicOffIcon from "@mui/icons-material/MusicOff";
 import discovery from "../sounds/Discovery_EP_AK_Aljosha_Konstanty.mp3";
 import Fab from "@mui/material/Fab";
-
 import PreWorks from "../components/pre-works/pre.works";
 import Tools from "../components/tools/tools";
 import Contact from "../components/contact/contact";
 import About from "../components/about/about";
 import Button from "@mui/material/Button";
+import Home from "../components/home/home";
 
 const darkTheme = createTheme({
   palette: {
@@ -97,28 +94,19 @@ const IndexPage = () => {
           </AnchorLink>
         </>
       )}
+
       <Layout>
         <Grid container mt={4} justifyContent="center">
           <Grid
             item
             xs={11}
-            mb={{ xs: 10, sm: 15 }}
+            mb={{ xs: 6, sm: 10 }}
             display={{ xs: "block", md: "flex", sm: "flex" }}
             height="15%"
           >
-            <Grid item xs={8} md={6} sm={6}>
-              <Logo />
-            </Grid>
-
-            <Grid item xs={8} md={6} sm={6} display="flex">
-              <Divider orientation="vertical" />
-              <Typography variant="h2" mt={{ xs: 12, sm: 0, md: 12 }} ml={5}>
-                Web solutions for <br />
-                <b>Minor</b> and <b>Start-up</b> companies.
-              </Typography>
-            </Grid>
+            <Home />
           </Grid>
-          <Grid item xs={6} mb="2%">
+          <Grid item xs={6} sm={4} md={2} mb={{ xs: 6, sm: 10 }}>
             <Button variant="outlined" size="large" fullWidth color="secondary">
               <AnchorLink
                 to="/#contact"
