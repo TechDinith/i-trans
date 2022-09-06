@@ -26,6 +26,7 @@ import Fab from "@mui/material/Fab";
 
 import PreWorks from "../components/pre-works/pre.works";
 import Tools from "../components/tools/tools";
+import Contact from "../components/contact/contact";
 
 const darkTheme = createTheme({
   palette: {
@@ -131,16 +132,20 @@ const IndexPage = () => {
           >
             <Tools />
           </Grid>
-          {/*
-          <Grid item xs={8}>
-            <Typography variant="h1" id="tools">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-              iusto assumenda quod consectetur facere impedit fugit hic eaque,
-              mollitia explicabo quae. Exercitationem fugit voluptates, atque
-              itaque incidunt alias. Ducimus, perferendis.
-            </Typography>
+
+          <Grid
+            item
+            xs={11}
+            component={Paper}
+            elevation={10}
+            mt={5}
+            p={2}
+            id="contact"
+          >
+            <Contact />
           </Grid>
-          <br />
+          {/*
+          
           <Grid item xs={8} id="contact">
             <Typography variant="h1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
