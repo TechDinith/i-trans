@@ -19,14 +19,14 @@ const config: GatsbyConfig = {
         icon: "src/images/itrans-images/iTrans.svg",
       },
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: `preworks`,
-        path: `${__dirname}/preworks`,
-      },
-    },
-    "gatsby-plugin-mdx",
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     name: `preworks`,
+    //     path: `${__dirname}/preworks`,
+    //   },
+    // },
+    // "gatsby-plugin-mdx",
   ],
 };
 

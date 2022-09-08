@@ -1,3 +1,3 @@
 export interface iImageSlider {
-  images: any[];
+  images?: any[];
 }
