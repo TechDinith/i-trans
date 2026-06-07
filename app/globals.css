@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to bottom right, rgb(1, 42, 75), rgb(0, 43, 36));
+  background-attachment: fixed;
+  min-height: 100vh;
+}

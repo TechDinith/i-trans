@@ -1,4 +1,18 @@
+# dependencies
 node_modules/
+
+# next.js
+.next/
+out/
+
+# production
+build/
+
+# misc
+.env*.local
+*.tsbuildinfo
+next-env.d.ts
+
+# old gatsby
 .cache/
-public
 src/gatsby-types.d.ts
