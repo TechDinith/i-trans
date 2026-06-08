@@ -1,11 +1,28 @@
 @import "tailwindcss";
 
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(40px, -60px) scale(1.1); }
+  50% { transform: translate(-30px, 30px) scale(0.9); }
+  75% { transform: translate(20px, 40px) scale(1.05); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-50px, 40px) scale(1.15); }
+  66% { transform: translate(30px, -50px) scale(0.85); }
+}
+
+@keyframes float-slower {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(60px, 30px) scale(1.1); }
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: linear-gradient(to bottom right, rgb(1, 42, 75), rgb(0, 43, 36));
-  background-attachment: fixed;
+  background: #0a0a0f;
   min-height: 100vh;
 }

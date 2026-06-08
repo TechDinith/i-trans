@@ -1,9 +1,8 @@
 import Nav from "@/components/nav";
 import Hero from "@/components/hero";
 import Work from "@/components/work";
-import PreWorks from "@/components/pre-works";
 import Tools from "@/components/tools";
-import Contact from "@/components/contact";
+import Connect from "@/components/connect";
 import About from "@/components/about";
 import Footer from "@/components/footer";
 import ScrollToTop from "@/components/scroll-to-top";
@@ -14,11 +13,10 @@ export default function Home() {
       <Nav />
       <Hero />
 
-      <main className="mx-auto max-w-5xl space-y-8 px-4 pb-10">
+      <main className="mx-auto max-w-6xl space-y-24 px-4 pb-10">
         <Work />
-        <PreWorks />
         <Tools />
-        <Contact />
+        <Connect />
         <About />
       </main>
 

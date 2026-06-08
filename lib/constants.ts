@@ -1,8 +1,10 @@
 export const SITE = {
   name: "iTrans",
-  tagline: "Web solutions for Minor and Start-up companies.",
-  email: "itranscontact@gmail.com",
-  sections: ["work", "pre-works", "tools", "contact", "about"] as const,
+  shortName: "iTrans",
+  tagline: "Web solutions for Small and Start-up companies.",
+  email: "contact.itrans@gmail.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://i-trans.vercel.app",
+  sections: ["services", "tools", "connect", "about"] as const,
 };
 
 export const WORK_ITEMS = [
@@ -10,3 +12,29 @@ export const WORK_ITEMS = [
   "#front-end web designs",
   "#back-end integrations for already designed front-ends",
 ] as const;
+
+export const SEO_KEYWORDS: string[] = [
+  "web development",
+  "web solutions",
+  "landing pages",
+  "portfolios",
+  "full-stack web apps",
+  "startup web development",
+  "small business website",
+  "React development",
+  "Next.js developer",
+  "Tailwind CSS",
+  "Spring Boot",
+  "Node.js",
+  "Firebase development",
+  "front-end development",
+  "back-end development",
+  "responsive web design",
+  "modern web solutions",
+  "startup tech partner",
+  "custom web applications",
+  "MongoDB",
+  "MySQL",
+];
+
+

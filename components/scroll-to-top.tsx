@@ -20,7 +20,7 @@ export default function ScrollToTop() {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
-          className="fixed bottom-4 right-4 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm transition-colors hover:bg-white/30"
+          className="fixed bottom-4 right-4 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-teal-600/40 to-cyan-400/40 text-white backdrop-blur-sm transition-opacity hover:opacity-80"
         >
           ↑
         </motion.a>
