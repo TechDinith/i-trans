@@ -1,0 +1,16 @@
+{
+  "headers": [
+    {
+      "source": "/(icon-32x32.png|icon-192.png|icon-512.png|apple-icon.png|icon.svg|iTrans.png|opengraph-image)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/(robots.txt|sitemap.xml|manifest.webmanifest)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
+      ]
+    }
+  ]
+}

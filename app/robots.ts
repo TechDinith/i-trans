@@ -2,8 +2,6 @@ import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/constants";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = SITE.url;
-
   return {
     rules: [
       {
@@ -11,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
-    host: baseUrl,
+    sitemap: `${SITE.url}/sitemap.xml`,
+    host: SITE.url,
   };
 }

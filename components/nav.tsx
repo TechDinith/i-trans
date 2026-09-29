@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { SITE } from "@/lib/constants";
 
 const links = [
   { href: "#services", label: "Services" },
+  { href: "#pricing", label: "Pricing" },
   { href: "#tools", label: "Tools" },
   { href: "#about", label: "About" },
+  { href: "#faq", label: "FAQ" },
 ];
 
 export default function Nav() {
@@ -31,7 +32,7 @@ export default function Nav() {
           </a>
         </div>
 
-        <button className="flex flex-col gap-1 md:hidden" onClick={() => setOpen(!open)} aria-label="Menu">
+        <button className="flex flex-col gap-1 md:hidden" onClick={() => setOpen(!open)} aria-label="Menu" aria-expanded={open}>
           <span className="block h-0.5 w-6 bg-white" />
           <span className="block h-0.5 w-6 bg-white" />
           <span className="block h-0.5 w-6 bg-white" />

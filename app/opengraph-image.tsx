@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "iTrans — Web Solutions for Startups";
+export const alt = "iTrans — Web Development for Startups & Small Businesses";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -90,12 +90,22 @@ export default function Image() {
             </span>
             <span
               style={{
-                fontSize: "32px",
+                fontSize: "34px",
                 color: "rgba(255,255,255,0.7)",
                 lineHeight: 1.2,
               }}
             >
-              Web Solutions for Startups
+              Web Development for Startups
+            </span>
+            <span
+              style={{
+                fontSize: "24px",
+                color: "rgba(255,255,255,0.45)",
+                lineHeight: 1.2,
+                marginTop: "4px",
+              }}
+            >
+              Landing Pages · Portfolio · Full-Stack · Firebase
             </span>
           </div>
         </div>

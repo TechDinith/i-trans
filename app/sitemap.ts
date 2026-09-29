@@ -1,15 +1,29 @@
 import type { MetadataRoute } from "next";
-import { SITE } from "@/lib/constants";
+import { SITE, SERVICES } from "@/lib/constants";
+
+const LAST_MODIFIED = new Date("2026-09-29T00:00:00.000Z");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = SITE.url;
+  const lastModified = LAST_MODIFIED;
 
   return [
     {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
+      url: `${SITE.url}/`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 1.0,
     },
+    {
+      url: `${SITE.url}/services/`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    ...SERVICES.map((s) => ({
+      url: `${SITE.url}/services/${s.slug}/`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
   ];
 }
