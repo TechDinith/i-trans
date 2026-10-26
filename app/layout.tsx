@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import { SITE, SERVICES, SEO_KEYWORDS } from "@/lib/constants";
 import { GA_ID } from "@/lib/analytics";
 import "./globals.css";
@@ -194,6 +195,7 @@ export default function RootLayout({
           />
         </div>
         {children}
+        <Analytics />
       </body>
     </html>
   );
